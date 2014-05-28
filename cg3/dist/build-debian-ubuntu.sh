@@ -2,7 +2,7 @@
 
 cd /tmp
 rm -fv dist-debian-ubuntu.pl
-wget http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/dist/dist-debian-ubuntu.pl -O dist-debian-ubuntu.pl
+wget http://visl.sdu.dk/svn/visl/opensource/packaging/cg3/dist/dist-debian-ubuntu.pl -O dist-debian-ubuntu.pl
 chmod +x *.pl
 ./dist-debian-ubuntu.pl -m 'Apertium Automaton <apertium-packaging@lists.sourceforge.net>' -e 'Apertium Automaton <apertium-packaging@lists.sourceforge.net>'
 

@@ -55,9 +55,10 @@ my $version = "$major.$minor.$patch.$revision";
 my $date = `date -u -R`;
 
 print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ 'cg3-$version'`;
-`rm -rf 'cg3-$version/dist' 'cg3-$version/win32'`;
-`find 'cg3-$version' | grep -v '/debian' | grep -v '\\.svn' | LC_ALL=C sort -r > orig.lst`;
+`rm -rf 'cg3-$version/win32'`;
+`find 'cg3-$version' | LC_ALL=C sort -r > orig.lst`;
 print `tar -jcvf 'cg3_$version.orig.tar.bz2' -T orig.lst`;
+print `svn export http://visl.sdu.dk/svn/visl/opensource/packaging/cg3/debian/ 'cg3-$version/debian/'`;
 
 foreach my $distro (keys %distros) {
 	my $chver = $version.'-';
