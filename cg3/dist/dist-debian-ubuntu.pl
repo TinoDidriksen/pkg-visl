@@ -34,9 +34,9 @@ my %distros = (
 	'utopic' => 'ubuntu',
 );
 
-print `rm -rf /tmp/cg3-debian.*`;
-print `mkdir -pv /tmp/cg3-debian.$$`;
-chdir "/tmp/cg3-debian.$$" or die "Could not change folder: $!\n";
+print `rm -rf /tmp/autopkg.*`;
+print `mkdir -pv /tmp/autopkg.$$`;
+chdir "/tmp/autopkg.$$" or die "Could not change folder: $!\n";
 
 print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/src/version.hpp`;
 my $major = 0;
@@ -56,7 +56,7 @@ my $date = `date -u -R`;
 
 print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ 'cg3-$version'`;
 `rm -rf 'cg3-$version/win32'`;
-`find 'cg3-$version' | LC_ALL=C sort -r > orig.lst`;
+`find 'cg3-$version' ! -type d | LC_ALL=C sort > orig.lst`;
 print `tar -jcvf 'cg3_$version.orig.tar.bz2' -T orig.lst`;
 print `svn export http://visl.sdu.dk/svn/visl/opensource/packaging/cg3/debian/ 'cg3-$version/debian/'`;
 
