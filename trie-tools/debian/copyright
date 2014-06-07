@@ -1,10 +1,9 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: cg3
+Upstream-Name: trie-tools
 Upstream-Contact: Tino Didriksen <mail@tinodidriksen.com>
-Source: http://visl.sdu.dk/cg3.html
 
 Files: *
-Copyright: 2007-2014 GrammarSoft ApS <info@grammarsoft.com>
+Copyright: 2013-2014 Tino Didriksen <mail@tinodidriksen.com>
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
