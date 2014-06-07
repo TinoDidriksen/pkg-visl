@@ -10,6 +10,6 @@ Vcs-Browser: http://visl.sdu.dk/svn/visl/tools/cg3ide/
 
 Package: cg3ide
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: cg3, ${shlibs:Depends}, ${misc:Depends}
 Description: IDE for CG-3
  IDE for developing and debugging CG-3 grammars.
