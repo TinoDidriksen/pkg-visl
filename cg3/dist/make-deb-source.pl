@@ -42,12 +42,12 @@ print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/src/version.hp
 my $major = 0;
 my $minor = 0;
 my $patch = 0;
-my $revision = 0;
+my $revision = `svn log -q -l 1 http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ | egrep -o '^r[0-9]+' | egrep -o '[0-9]+'` + 0;
 {
 	local $/ = undef;
 	open FILE, 'version.hpp' or die "Could not open version.hpp: $!\n";
 	my $data = <FILE>;
-	($major,$minor,$patch,$revision) = ($data =~ m@CG3_VERSION_MAJOR = (\d+);.*?CG3_VERSION_MINOR = (\d+);.*?CG3_VERSION_PATCH = (\d+);.*?CG3_REVISION = (\d+);@s);
+	($major,$minor,$patch) = ($data =~ m@CG3_VERSION_MAJOR = (\d+);.*?CG3_VERSION_MINOR = (\d+);.*?CG3_VERSION_PATCH = (\d+);@s);
 	close FILE;
 }
 
@@ -69,7 +69,7 @@ foreach my $distro (keys %distros) {
 	my $chlog = <<CHLOG;
 cg3 ($chver) $distro; urgency=low
 
-  * Automatic build - see changelog at http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ChangeLog
+  * Automatic build - see changelog via: svn log http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/
 
  -- $opts{e}  $date
 CHLOG
