@@ -3,7 +3,7 @@ Section: science
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Tino Didriksen <mail@tinodidriksen.com>
-Build-Depends: debhelper (>= 9.0), cmake (>= 2.8.9)
+Build-Depends: debhelper (>= 9.0), cmake (>= 2.8.0), libgoogle-perftools-dev
 Standards-Version: 3.9.5
 Vcs-Svn: http://visl.sdu.dk/svn/visl/tools/trie-tools/
 Vcs-Browser: http://visl.sdu.dk/svn/visl/tools/trie-tools/
