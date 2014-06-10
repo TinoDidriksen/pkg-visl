@@ -42,7 +42,8 @@ print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/src/version.hp
 my $major = 0;
 my $minor = 0;
 my $patch = 0;
-my $revision = `svn log -q -l 1 http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ | egrep -o '^r[0-9]+' | egrep -o '[0-9]+'` + 0;
+my $logline = `svn log -q -l 1 http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ | grep '^r'`;
+my ($revision,$srcdate) = ($logline =~ m@^r(\d+) \| [^|]+\| ([^(]+)@);
 {
 	local $/ = undef;
 	open FILE, 'version.hpp' or die "Could not open version.hpp: $!\n";
@@ -57,7 +58,8 @@ my $date = `date -u -R`;
 print `svn export http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/ 'cg3-$version'`;
 `rm -rf 'cg3-$version/win32'`;
 `find 'cg3-$version' ! -type d | LC_ALL=C sort > orig.lst`;
-print `tar -jcvf 'cg3_$version.orig.tar.bz2' -T orig.lst`;
+print `tar --no-acls --no-xattrs '--mtime=$srcdate' -cf 'cg3_$version.orig.tar' -T orig.lst`;
+`bzip2 -9c 'cg3_$version.orig.tar' > 'cg3_$version.orig.tar.bz2'`;
 print `svn export http://visl.sdu.dk/svn/visl/opensource/packaging/cg3/debian/ 'cg3-$version/debian/'`;
 
 foreach my $distro (keys %distros) {
@@ -85,5 +87,3 @@ CHLOG
 	chdir '..';
 	print `debsign 'cg3_$chver\_source.changes'`;
 }
-
-chdir "/tmp";
