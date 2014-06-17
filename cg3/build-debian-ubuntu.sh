@@ -13,10 +13,16 @@ do
 	for ARCH in i386 amd64
 	do
 		echo "Updating $DISTRO for $ARCH"
-		cowbuilder --update --basepath /var/cache/pbuilder/base-$DISTRO-$ARCH.cow/ 2>&1 | tee /home/apertium/public_html/apt/logs/$PROGNAME/$DISTRO-$ARCH.log
+		cowbuilder --update --no-cowdancer-update --basepath /var/cache/pbuilder/base-$DISTRO-$ARCH.cow/ >/home/apertium/public_html/apt/logs/$PROGNAME/$DISTRO-$ARCH.log 2>&1
 		echo "Building $DISTRO for $ARCH"
-		time cowbuilder --build *$DISTRO*.dsc --basepath /var/cache/pbuilder/base-$DISTRO-$ARCH.cow/ 2>&1 | tee -a /home/apertium/public_html/apt/logs/$PROGNAME/$DISTRO-$ARCH.log
+		cowbuilder --build *$DISTRO*.dsc --basepath /var/cache/pbuilder/base-$DISTRO-$ARCH.cow/ >>/home/apertium/public_html/apt/logs/$PROGNAME/$DISTRO-$ARCH.log 2>&1 &
 	done
+done
+
+for job in `jobs -p`
+do
+	echo "Waiting for $job"
+	wait $job
 done
 
 rm -f /home/apertium/public_html/apt/logs/$PROGNAME/reprepro.log
