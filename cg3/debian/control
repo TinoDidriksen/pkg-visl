@@ -6,8 +6,8 @@ Uploaders: Tino Didriksen <mail@tinodidriksen.com>
 Build-Depends: debhelper (>= 9.0), cmake (>= 2.8.9), libboost1.48-dev | libboost-dev (>= 1.49.0), libicu-dev (>= 4.8)
 Standards-Version: 3.9.5
 Homepage: http://visl.sdu.dk/cg3.html
-Vcs-Svn: http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/
-Vcs-Browser: http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk/
+Vcs-Git: git://git.debian.org/git/debian-science/packages/cg3.git
+Vcs-Browser: http://git.debian.org/?p=debian-science/packages/cg3.git
 
 Package: cg3
 Architecture: any
