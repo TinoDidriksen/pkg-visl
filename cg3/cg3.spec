@@ -58,6 +58,8 @@ See http://visl.sdu.dk/cg3.html for more documentation
 %if 0%{?el6}
 ./get-boost.sh
 %cmake28 .
+%elif 0%{?suse_version}
+%cmake
 %else
 %cmake .
 %endif
