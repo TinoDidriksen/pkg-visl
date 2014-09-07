@@ -30,12 +30,12 @@ available context, as opposed to n-grams.
 
 See http://visl.sdu.dk/cg3.html for more documentation
 
-%package -n libcg3-0
+%package shared
 Summary: Runtime for CG-3
 Group: Development/Libraries
 Provides: libcg3 = %{version}-%{release}
 
-%description -n libcg3-0
+%description shared
 Runtime library for applications using the CG-3 API.
 
 It is recommended to instrument the CLI tools instead of using this API.
@@ -43,12 +43,13 @@ It is recommended to instrument the CLI tools instead of using this API.
 See http://visl.sdu.dk/cg3.html for more documentation
 
 
-%package -n libcg3-devel
+%package devel
 Summary: Headers and static library to develop using the CG-3 library
 Group: Development/Libraries
-Requires: libcg3-0 = %{version}-%{release}
+Requires: %{name}-shared = %{version}-%{release}
+Provides: libcg3-devel = %{version}-%{release}
 
-%description -n libcg3-devel
+%description devel
 Development files to use the CG-3 API.
 
 It is recommended to instrument the CLI tools instead of using this API.
@@ -91,19 +92,19 @@ make test
 %{_datadir}/man/man1/*
 %{_datadir}/emacs/site-lisp/*
 
-%files -n libcg3-0
+%files shared
 %{_libdir}/*.so.*
 %{_libdir}/cg3
 
-%files -n libcg3-devel
+%files devel
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_libdir}/*.a*
 %{_libdir}/*.so
 
-%post -n libcg3-0 -p /sbin/ldconfig
+%post shared -p /sbin/ldconfig
 
-%postun -n libcg3-0 -p /sbin/ldconfig
+%postun shared -p /sbin/ldconfig
 
 %changelog
 * Fri Sep 05 2014 Tino Didriksen <mail@tinodidriksen.com> 0.9.8.10063-1
