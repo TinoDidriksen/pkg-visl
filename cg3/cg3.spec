@@ -17,11 +17,7 @@ BuildRequires: cmake >= 2.8.9
 BuildRequires: boost-devel >= 1.48.0
 %endif
 BuildRequires: libicu-devel >= 4.2
-%if 0%{?suse_version}
-BuildRequires: pkg-config
-%else
 BuildRequires: pkgconfig
-%endif
 
 %description
 Constraint Grammar compiler and applicator for the 3rd edition of CG
@@ -34,12 +30,12 @@ available context, as opposed to n-grams.
 
 See http://visl.sdu.dk/cg3.html for more documentation
 
-%package shared
+%package -n libcg3-0
 Summary: Runtime for CG-3
 Group: Development/Libraries
 Provides: libcg3 = %{version}-%{release}
 
-%description shared
+%description -n libcg3-0
 Runtime library for applications using the CG-3 API.
 
 It is recommended to instrument the CLI tools instead of using this API.
@@ -47,13 +43,12 @@ It is recommended to instrument the CLI tools instead of using this API.
 See http://visl.sdu.dk/cg3.html for more documentation
 
 
-%package devel
+%package -n libcg3-devel
 Summary: Headers and static library to develop using the CG-3 library
 Group: Development/Libraries
-Requires: %{name}-shared = %{version}-%{release}
-Provides: libcg3-devel = %{version}-%{release}
+Requires: libcg3-0 = %{version}-%{release}
 
-%description devel
+%description -n libcg3-devel
 Development files to use the CG-3 API.
 
 It is recommended to instrument the CLI tools instead of using this API.
@@ -96,19 +91,19 @@ make test
 %{_datadir}/man/man1/*
 %{_datadir}/emacs/site-lisp/*
 
-%files shared
+%files -n libcg3-0
 %{_libdir}/*.so.*
 %{_libdir}/cg3
 
-%files devel
+%files -n libcg3-devel
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_libdir}/*.a*
 %{_libdir}/*.so
 
-%post shared -p /sbin/ldconfig
+%post -n libcg3-0 -p /sbin/ldconfig
 
-%postun shared -p /sbin/ldconfig
+%postun -n libcg3-0 -p /sbin/ldconfig
 
 %changelog
 * Fri Sep 05 2014 Tino Didriksen <mail@tinodidriksen.com> 0.9.8.10063-1
