@@ -17,7 +17,11 @@ BuildRequires: cmake >= 2.8.9
 BuildRequires: boost-devel >= 1.48.0
 %endif
 BuildRequires: libicu-devel >= 4.2
+%if 0%{?suse_version}
 BuildRequires: pkg-config
+%else
+BuildRequires: pkgconfig
+%endif
 
 %description
 Constraint Grammar compiler and applicator for the 3rd edition of CG
