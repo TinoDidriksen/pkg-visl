@@ -10,12 +10,11 @@ Provides: vislcg3 = %{version}-%{release}
 
 BuildRequires: gcc-c++
 %if 0%{?el6}
-BuildRequires: wget
 BuildRequires: cmake28 >= 2.8.9
 %else
 BuildRequires: cmake >= 2.8.9
-BuildRequires: boost-devel >= 1.48.0
 %endif
+BuildRequires: boost-devel >= 1.48.0
 BuildRequires: libicu-devel >= 4.2
 BuildRequires: pkgconfig
 
@@ -61,7 +60,6 @@ See http://visl.sdu.dk/cg3.html for more documentation
 
 %build
 %if 0%{?el6}
-./get-boost.sh
 %cmake28 .
 %else
 %if 0%{?suse_version}
