@@ -17,6 +17,10 @@ BuildRequires: cmake >= 2.8.9
 BuildRequires: boost-devel >= 1.48.0
 BuildRequires: libicu-devel >= 4.2
 BuildRequires: pkgconfig
+# OpenSUSE can't detect Perl dependencies, so list them
+Requires: perl(Digest::SHA1)
+Requires: perl(File::Spec)
+Requires: perl(Getopt::Long)
 
 %description
 Constraint Grammar compiler and applicator for the 3rd edition of CG
