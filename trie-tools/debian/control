@@ -8,8 +8,6 @@ Build-Depends:
 	debhelper (>= 9.0),
 	libgoogle-perftools-dev
 Standards-Version: 3.9.5
-Vcs-Svn: http://visl.sdu.dk/svn/visl/tools/trie-tools/
-Vcs-Browser: http://visl.sdu.dk/svn/visl/tools/trie-tools/
 
 Package: trie-tools
 Architecture: any
