@@ -95,7 +95,6 @@ make test
 
 %files -n libcg3-0
 %{_libdir}/*.so.*
-%{_libdir}/cg3
 
 %files -n libcg3-devel
 %{_includedir}/*
