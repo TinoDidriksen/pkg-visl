@@ -2,7 +2,8 @@ Source: trie-tools
 Section: science
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Uploaders: Tino Didriksen <mail@tinodidriksen.com>
+Uploaders: Tino Didriksen <mail@tinodidriksen.com>,
+           Kartik Mistry <kartik@debian.org>
 Build-Depends:
 	cmake (>= 2.8.0),
 	debhelper (>= 9.0),
@@ -11,9 +12,7 @@ Standards-Version: 3.9.5
 
 Package: trie-tools
 Architecture: any
-Depends:
-	${misc:Depends},
-	${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Tools for creating and working with tries
  Tools for creating, browsing, printing, and working with tries for various
  purposes such as spell checking, title browsing, tokenization, etc.

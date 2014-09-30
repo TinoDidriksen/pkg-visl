@@ -2,7 +2,8 @@ Source: cg3
 Section: science
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Uploaders: Tino Didriksen <mail@tinodidriksen.com>
+Uploaders: Tino Didriksen <mail@tinodidriksen.com>,
+           Kartik Mistry <kartik@debian.org>
 Build-Depends:
 	cmake (>= 2.8.9),
 	debhelper (>= 9.0),
@@ -15,11 +16,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/cg3.git
 
 Package: cg3
 Architecture: any
-Depends:
-	libcg3-0 (= ${binary:Version}),
-	${misc:Depends},
-	${perl:Depends},
-	${shlibs:Depends}
+Depends: libcg3-0 (= ${binary:Version}), ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends}
 Provides: vislcg3
 Conflicts: vislcg3
 Description: Tools for using the 3rd edition of Constraint Grammar (CG-3)
@@ -36,11 +33,8 @@ Description: Tools for using the 3rd edition of Constraint Grammar (CG-3)
 Package: libcg3-0
 Architecture: any
 Multi-Arch: same
-Pre-Depends:
-	${misc:Pre-Depends}
-Depends:
-	${misc:Depends},
-	${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: libcg3
 Conflicts: libcg3
 Description: Runtime for CG-3
@@ -54,12 +48,8 @@ Package: libcg3-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Pre-Depends:
-	${misc:Pre-Depends}
-Depends:
-	libcg3-0 (= ${binary:Version}),
-	${misc:Depends},
-	${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libcg3-0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: Headers and static library to develop using the CG-3 library
  Development files to use the CG-3 API.
  .
