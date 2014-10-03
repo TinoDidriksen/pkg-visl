@@ -88,15 +88,18 @@ ln -s vislcg3.1.gz %{buildroot}%{_datadir}/man/man1/cg3.1.gz
 make test
 
 %files
+%defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING README TODO
 %{_bindir}/*
 %{_datadir}/man/man1/*
 %{_datadir}/emacs/site-lisp/*
 
 %files -n libcg3-0
+%defattr(-,root,root)
 %{_libdir}/*.so.*
 
 %files -n libcg3-devel
+%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_libdir}/*.a*
