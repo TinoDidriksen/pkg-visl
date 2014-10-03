@@ -1,5 +1,5 @@
 Name: cg3
-Version: 0.9.8.10063
+Version: 0.9.8.10184
 Release: 1%{?dist}
 Summary: Tools for using the 3rd edition of Constraint Grammar (CG-3)
 Group: Development/Tools
