@@ -21,3 +21,27 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+Files: emacs/*
+Copyright: 2010-2013 Kevin Brubeck Unhammer <unhammer@fsfe.org>
+License: GPL-2+
+
+Files: CMake/FindBoost.cmake
+Copyright: 2006-2009 Kitware, Inc.
+License: BSD-3-clause
+
+Files: include/exec-stream/*
+Copyright: 2004 Artem Khodush
+License: BSD-3-clause
+
+Files: include/cycle.h
+Copyright: 2003, 2007-8 Matteo Frigo
+ 2003, 2007-8 Massachusetts Institute of Technology
+License: Expat
+
+Files: include/uoptions.h
+ src/icu_uoptions.cpp
+Copyright: 1995-2014 International Business Machines Corporation and others
+License: ICU
+ A copy of the license is provided in the source tree as license.icu.txt
+ or can be read at http://icu-project.org/license
