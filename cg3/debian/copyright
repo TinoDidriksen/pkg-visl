@@ -41,8 +41,14 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
+Files: include/exec-stream/*
+Copyright: 2004 Artem Khodush
+License: BSD-3-clause
+
 Files: CMake/FindBoost.cmake
 Copyright: 2006-2009 Kitware, Inc.
+License: BSD-3-clause
+
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -70,13 +76,9 @@ License: BSD-3-clause
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
 
-Files: include/exec-stream/*
-Copyright: 2004 Artem Khodush
-License: BSD-3-clause
-
 Files: include/cycle.h
 Copyright: 2003, 2007-8 Matteo Frigo
- 2003, 2007-8 Massachusetts Institute of Technology
+           2003, 2007-8 Massachusetts Institute of Technology
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
@@ -98,7 +100,7 @@ License: Expat
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files: include/uoptions.h
- src/icu_uoptions.cpp
+       src/icu_uoptions.cpp
 Copyright: 1995-2014 International Business Machines Corporation and others
 License: ICU
  Permission is hereby granted, free of charge, to any person obtaining a
