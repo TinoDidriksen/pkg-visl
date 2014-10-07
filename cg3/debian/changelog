@@ -1,3 +1,9 @@
+cg3 (0.9.9~r10195-1) experimental; urgency=low
+
+  * Updated to latest from svn
+
+ -- Tino Didriksen <mail@tinodidriksen.com>  Tue, 7 Oct 2014 14:36:01 +0000
+
 cg3 (0.9.9~r10190-1) experimental; urgency=low
 
   * Initial release (Closes: #475452)
