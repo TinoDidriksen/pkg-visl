@@ -44,12 +44,6 @@ License: GPL-2+
 Files: include/exec-stream/*
 Copyright: 2004 Artem Khodush
 License: BSD-3-clause
-
-Files: CMake/FindBoost.cmake
-Copyright: 2006-2009 Kitware, Inc.
-License: BSD-3-clause
-
-License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
  .
