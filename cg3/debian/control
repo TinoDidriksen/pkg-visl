@@ -21,6 +21,7 @@ Depends: libcg3-0 (= ${binary:Version}),
          ${shlibs:Depends}
 Provides: vislcg3
 Conflicts: vislcg3
+Replaces: vislcg3
 Description: Tools for using the 3rd edition of Constraint Grammar (CG-3)
  Constraint Grammar compiler and applicator for the 3rd edition of CG
  that is developed and maintained by VISL SDU and GrammarSoft ApS.
@@ -39,6 +40,7 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: libcg3
 Conflicts: libcg3
+Replaces: libcg3
 Description: Runtime for CG-3
  Runtime library for applications using the CG-3 API.
  .

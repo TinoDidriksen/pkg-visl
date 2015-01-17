@@ -37,6 +37,7 @@ See http://visl.sdu.dk/cg3.html for more documentation
 Summary: Runtime for CG-3
 Group: Development/Libraries
 Provides: libcg3 = %{version}-%{release}
+Obsoletes: libcg3 < %{version}-%{release}
 
 %description -n libcg3-0
 Runtime library for applications using the CG-3 API.
