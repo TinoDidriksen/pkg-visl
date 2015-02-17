@@ -9,7 +9,11 @@ Source0: %{name}_%{version}.orig.tar.bz2
 
 BuildRequires: gcc-c++
 BuildRequires: pkgconfig
+%if 0%{?suse_version}
+BuildRequires: libqt5-qtbase
+%else
 BuildRequires: qt5-qtbase-devel
+%endif
 Requires: cg3
 
 %description
@@ -20,12 +24,20 @@ IDE for developing and debugging CG-3 grammars.
 %setup -q -n %{name}-%{version}
 
 %build
+rm -rf build
+mkdir build
+cd build
+%if 0%{?suse_version}
+%qmake5 ../%{name}.pro
+%else
 %_qt5_qmake ../%{name}.pro
+%endif
 make %{?_smp_mflags}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
+cd build
+install -d %{buildroot}%{_bindir}
+cp cg3ide cg3processor %{buildroot}%{_bindir}/
 
 %files
 %defattr(-,root,root)
