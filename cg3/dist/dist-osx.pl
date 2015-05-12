@@ -25,14 +25,14 @@ print STDERR `cp -av $dname/../src/libcg3.0.dylib ./lib/ 2>&1`;
 print STDERR `cp -av $dname/../src/libcg3-private.dylib ./lib/cg3/ 2>&1`;
 foreach my $bin (('vislcg3','cg-comp','cg-proc','cg-conv')) {
    print STDERR `ln -sv ./bin/$bin $bin`;
-   print STDERR `install_name_tool -change libicuuc.52.dylib \@executable_path/../lib/libicuuc.52.dylib ./bin/$bin`;
-   print STDERR `install_name_tool -change libicuio.52.dylib \@executable_path/../lib/libicuio.52.dylib ./bin/$bin`;
-   print STDERR `install_name_tool -change libicui18n.52.dylib \@executable_path/../lib/libicui18n.52.dylib ./bin/$bin`;
+   print STDERR `install_name_tool -change libicuuc.54.dylib \@executable_path/../lib/libicuuc.54.dylib ./bin/$bin`;
+   print STDERR `install_name_tool -change libicuio.54.dylib \@executable_path/../lib/libicuio.54.dylib ./bin/$bin`;
+   print STDERR `install_name_tool -change libicui18n.54.dylib \@executable_path/../lib/libicui18n.54.dylib ./bin/$bin`;
 }
 foreach my $lib (('libcg3.0.dylib')) {
-   print STDERR `install_name_tool -change libicuuc.52.dylib \@executable_path/../lib/libicuuc.52.dylib ./lib/$lib`;
-   print STDERR `install_name_tool -change libicuio.52.dylib \@executable_path/../lib/libicuio.52.dylib ./lib/$lib`;
-   print STDERR `install_name_tool -change libicui18n.52.dylib \@executable_path/../lib/libicui18n.52.dylib ./lib/$lib`;
+   print STDERR `install_name_tool -change libicuuc.54.dylib \@executable_path/../lib/libicuuc.54.dylib ./lib/$lib`;
+   print STDERR `install_name_tool -change libicuio.54.dylib \@executable_path/../lib/libicuio.54.dylib ./lib/$lib`;
+   print STDERR `install_name_tool -change libicui18n.54.dylib \@executable_path/../lib/libicui18n.54.dylib ./lib/$lib`;
 }
 print STDERR `cp -av $dname/../scripts/cg3-autobin.pl ./bin/ 2>&1`;
 print STDERR `cp -av /usr/local/lib/libicu*.dylib ./lib/ 2>&1`;
