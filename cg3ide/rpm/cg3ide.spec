@@ -10,7 +10,7 @@ Source0: %{name}_%{version}.orig.tar.bz2
 BuildRequires: gcc-c++
 BuildRequires: pkgconfig
 %if 0%{?suse_version}
-BuildRequires: libqt5-qtbase
+BuildRequires: libqt5-qtbase-devel
 %else
 BuildRequires: qt5-qtbase-devel
 %endif
@@ -28,7 +28,7 @@ rm -rf build
 mkdir build
 cd build
 %if 0%{?suse_version}
-%qmake5 ../%{name}.pro
+qmake-qt5 QMAKE_CFLAGS+="%optflags" QMAKE_CXXFLAGS+="%optflags" QMAKE_STRIP="/bin/true" ../%{name}.pro
 %else
 %_qt5_qmake ../%{name}.pro
 %endif
