@@ -1,8 +1,26 @@
-cg3 (0.9.9~r10439-1) experimental; urgency=low
+cg3 (0.9.9~r10784-1) unstable; urgency=low
 
-  * Updated to latest from svn
+  * Updated to latest from svn.
 
- -- Tino Didriksen <mail@tinodidriksen.com>  Sun, 8 Feb 2015 23:26:01 +0000
+ -- Tino Didriksen <mail@tinodidriksen.com>  Sun, 21 Jun 2015 18:59:50 +0200
+
+cg3 (0.9.9~r10439-2) unstable; urgency=low
+
+  * debian/control:
+    + Fixed FTBFS on buildds. Thanks to Pino Toscano <pino@debian.org> for
+      patch (Closes: #789471)
+
+ -- Kartik Mistry <kartik@debian.org>  Sun, 21 Jun 2015 21:21:26 +0530
+
+cg3 (0.9.9~r10439-1) unstable; urgency=low
+
+  [ Tino Didriksen ]
+  * Updated to latest from svn.
+
+  [ Kartik Mistry ]
+  * Uploaded to unstable.
+
+ -- Kartik Mistry <kartik@debian.org>  Sat, 20 Jun 2015 21:53:32 +0530
 
 cg3 (0.9.9~r10195-1) experimental; urgency=low
 
