@@ -1,3 +1,9 @@
+cg3 (0.9.9~r10800-1) unstable; urgency=low
+
+  * Updated to latest from svn.
+
+ -- Tino Didriksen <mail@tinodidriksen.com>  Tue, 23 Jun 2015 18:31:40 +0200
+
 cg3 (0.9.9~r10793-1) unstable; urgency=low
 
   * Updated to latest from svn.
