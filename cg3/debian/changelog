@@ -1,8 +1,8 @@
-cg3 (0.9.9~r10817-1) unstable; urgency=low
+cg3 (0.9.9~r10822-1) unstable; urgency=low
 
   * Updated to latest from svn. Fixes assert failure and segfault.
 
- -- Tino Didriksen <mail@tinodidriksen.com>  Mon, 29 Jun 2015 09:12:50 +0200
+ -- Tino Didriksen <mail@tinodidriksen.com>  Tue, 30 Jun 2015 14:32:50 +0200
 
 cg3 (0.9.9~r10793-1) unstable; urgency=low
 
