@@ -103,7 +103,6 @@ make test
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
-%{_libdir}/*.a*
 %{_libdir}/*.so
 
 %post -n libcg3-0 -p /sbin/ldconfig
