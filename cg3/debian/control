@@ -54,7 +54,7 @@ Multi-Arch: same
 Section: libdevel
 Pre-Depends: ${misc:Pre-Depends}
 Depends: libcg3-0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
-Description: Headers and static library to develop using the CG-3 library
+Description: Headers and shared files to develop using the CG-3 library
  Development files to use the CG-3 API.
  .
  It is recommended to instrument the CLI tools instead of using this API.
