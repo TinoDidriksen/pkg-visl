@@ -85,7 +85,7 @@ make test
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog COPYING README TODO
+%doc AUTHORS ChangeLog COPYING README.md TODO
 %{_bindir}/*
 %{_datadir}/man/man1/*
 %{_datadir}/emacs/site-lisp/*
