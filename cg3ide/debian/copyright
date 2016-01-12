@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cg3ide
-Upstream-Contact: Tino Didriksen <mail@tinodidriksen.com>
+Upstream-Contact: Tino Didriksen <tino@didriksen.cc>
 
 Files: *
 Copyright: 2012-2014 GrammarSoft ApS <info@grammarsoft.com>

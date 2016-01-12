@@ -49,5 +49,5 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
-* Fri Sep 05 2014 Tino Didriksen <mail@tinodidriksen.com> 0.8.2.10503
+* Fri Sep 05 2014 Tino Didriksen <tino@didriksen.cc> 0.8.2.10503
 - Initial version of the package

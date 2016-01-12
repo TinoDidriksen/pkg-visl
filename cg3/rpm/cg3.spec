@@ -105,5 +105,5 @@ make test
 %postun -n libcg3-0 -p /sbin/ldconfig
 
 %changelog
-* Fri Sep 05 2014 Tino Didriksen <mail@tinodidriksen.com> 0.9.8.10063-1
+* Fri Sep 05 2014 Tino Didriksen <tino@didriksen.cc> 0.9.8.10063-1
 - Initial version of the package

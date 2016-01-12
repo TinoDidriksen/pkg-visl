@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cg3
-Upstream-Contact: Tino Didriksen <mail@tinodidriksen.com>
+Upstream-Contact: Tino Didriksen <tino@didriksen.cc>
 Source: http://visl.sdu.dk/cg3.html
 
 Files: *

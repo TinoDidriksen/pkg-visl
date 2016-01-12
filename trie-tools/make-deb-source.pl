@@ -12,8 +12,8 @@ use open qw( :encoding(UTF-8) :std );
 
 use Getopt::Long;
 my %opts = (
-	'm' => 'Tino Didriksen <mail@tinodidriksen.com>',
-	'e' => 'Tino Didriksen <mail@tinodidriksen.com>',
+	'm' => 'Tino Didriksen <tino@didriksen.cc>',
+	'e' => 'Tino Didriksen <tino@didriksen.cc>',
 	'dv' => 1,
 	'fv' => 1,
 );
