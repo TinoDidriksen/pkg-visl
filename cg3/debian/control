@@ -10,7 +10,7 @@ Build-Depends: cmake (>= 2.8.9),
                libicu-dev (>= 4.8)
 Standards-Version: 3.9.7
 Homepage: http://visl.sdu.dk/cg3.html
-Vcs-Git: https://anonscm.debian.org/debian-science/packages/cg3.git
+Vcs-Git: https://anonscm.debian.org/cgit/debian-science/packages/cg3.git
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/cg3.git
 
 Package: cg3
