@@ -4,7 +4,9 @@ Upstream-Contact: Tino Didriksen <tino@didriksen.cc>
 Source: http://visl.sdu.dk/cg3.html
 
 Files: *
-Copyright: 2007-2014 GrammarSoft ApS <info@grammarsoft.com>
+Copyright: 2007-2016 GrammarSoft ApS <info@grammarsoft.com>
+License: GPL-3+
+
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -23,7 +25,9 @@ License: GPL-3+
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
 Files: emacs/*
-Copyright: 2010-2013 Kevin Brubeck Unhammer <unhammer@fsfe.org>
+Copyright: 2010-2016 Kevin Brubeck Unhammer <unhammer@fsfe.org>
+License: GPL-2+
+
 License: GPL-2+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -50,6 +54,8 @@ Files: include/cycle.h
 Copyright: 2003, 2007-8 Matteo Frigo
            2003, 2007-8 Massachusetts Institute of Technology
 License: Expat
+
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
  "Software"), to deal in the Software without restriction, including
@@ -72,6 +78,8 @@ License: Expat
 Files: include/uoptions.h
        src/icu_uoptions.cpp
 Copyright: 1995-2014 International Business Machines Corporation and others
+License: ICU
+
 License: ICU
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the
